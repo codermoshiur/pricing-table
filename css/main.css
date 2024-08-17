@@ -1,0 +1,150 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+/* Reset CSS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/* Global Style */
+:root {
+  --clr-white: rgb(255, 255, 255);
+  --clr-teal: hsla(162, 68%, 54%, 50%);
+  --clr-pink: hsla(339, 82%, 67%, 50%);
+  --clr-yellow: hsla(47, 100%, 62%, 50%);
+  --clr-gray: hsla(210, 17%, 95%, 50%);
+}
+.container {
+  max-width: min(100%, 69.375rem);
+  padding: 0 1.5rem;
+}
+/* Pricing Table */
+.pricing-table {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-gray);
+}
+.pricing-list {
+  display: flex;
+  gap: 2rem;
+  list-style-type: none;
+  padding: 3rem;
+  background-color: var(--clr-gray);
+  outline: 1.125rem solid var(--clr-white);
+  border-radius: 0.625rem;
+  position: relative;
+}
+.pricing-list__item {
+  max-width: 18.75rem;
+}
+.pricing-list__item:nth-child(1)::before {
+  content: "";
+  width: 18.75rem;
+  height: 300px;
+  border-radius: 50%;
+  background-color: var(--clr-pink);
+  border: none;
+  position: absolute;
+  bottom: -10rem;
+  left: -10rem;
+  z-index: -1;
+  filter: blur(6.25rem);
+}
+.pricing-list__item:nth-child(2)::before {
+  content: "";
+  width: 18.75rem;
+  height: 300px;
+  border-radius: 50%;
+  background-color: var(--clr-teal);
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  z-index: -1;
+  filter: blur(6.25rem);
+}
+.pricing-list__item:nth-child(3)::before {
+  content: "";
+  width: 18.75rem;
+  height: 300px;
+  border-radius: 50%;
+  background-color: var(--clr-yellow);
+  border: none;
+  position: absolute;
+  top: -10rem;
+  right: 0;
+  z-index: -1;
+  filter: blur(6.25rem);
+}
+.pricing-list__title {
+  margin-bottom: 1.5rem;
+}
+.pricing-list__subtitle {
+  font-size: 4rem;
+  line-height: 1;
+}
+.pricing-list__subtitle .currency {
+  font-size: 1.5rem;
+}
+.pricing-list__description {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.pricing-list__btn {
+  cursor: pointer;
+  text-transform: capitalize;
+  border: 0;
+  padding: 1rem;
+  border-radius: 0.625rem;
+}
+.pricing-list__btn--pink {
+  background-color: var(--clr-pink);
+}
+.pricing-list__btn--teal {
+  background-color: var(--clr-teal);
+}
+.pricing-list__btn--yellow {
+  background-color: var(--clr-yellow);
+}
+/* Media Query */
+@media (max-width: 80rem) {
+  .pricing-list {
+    flex-wrap: wrap;
+  }
+}
